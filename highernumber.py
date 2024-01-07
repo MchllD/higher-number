@@ -6,6 +6,7 @@
 numbers = input("Please enter five numbers: ")
 
 # Input the first number
+
 # Input the second number
 # Input the third number
 # Input the fourth number
