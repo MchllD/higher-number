@@ -1,16 +1,31 @@
 # Ask user to input 3 numbers. Find and print the biggest number using only if-else statement.
 
 # pseudocode
-      
+import tkinter as tk
+import random
+root = tk.Tk()
+root.title("Input Five Numbers")
+
+labels = []
+entry_list = []
+
 # Ask the user to input five numbers
-numbers = input("Please enter five numbers: ")
-
 # Input the first number
-
 # Input the second number
 # Input the third number
 # Input the fourth number
 # Input the fifth number
+for i in range(5):
+    label = tk.Label(root, text=f"Enter number {i+1}:", font=("Helvetica", 14))
+    label.grid(row=i, column=0, pady=10, padx=15)
+    labels.append(label)
+
+    entry = tk.Entry(root, font=("Helvetica", 14))
+    entry.grid(row=i, column=1, pady=10, padx=15)
+    entry_list.append(entry)
+
+root.mainloop()
+
 
 
 # Check which number is the largest among the five
