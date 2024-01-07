@@ -23,12 +23,18 @@ for i in range(5):
     entry = tk.Entry(root, font=("Helvetica", 14))
     entry.grid(row=i, column=1, pady=10, padx=15)
     entry_list.append(entry)
-
-root.mainloop()
-
-
+    
+def check_largest():
+    num1 = float(entry_list[0].get())
+    num2 = float(entry_list[1].get())
+    num3 = float(entry_list[2].get())
+    num4 = float(entry_list[3].get())
+    num5 = float(entry_list[4].get())
 
 # Check which number is the largest among the five
+def find_largest():
+    numbers = [float(entry_list[i].get()) for i in range(5) if entry_list[i].get()]
+    
 # if first number is greater than or equal to second number and first number is greater than or equal to third number and first number is greater than or equal to fourth number and first number is greater than or equal to fifth number:
 # Largest number is the first number
 # else if second number is greater than or equal to first number and second number is greater than or equal to third number and second number is greater than or equal to fourth number and second number is greater than or equal to fifth number:
@@ -42,6 +48,6 @@ root.mainloop()
 
 # Print the largest number
 
-
+root.mainloop()
 
 
