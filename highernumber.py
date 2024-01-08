@@ -64,7 +64,7 @@ def check_largest():
         
 root = tk.Tk()
 root.title("Find the Largest Number")
-root.geometry("430x360")
+root.geometry("500x380")
 
 # Welcome Page
 welcome_frame = tk.Frame(root, width=430, height=360) 
