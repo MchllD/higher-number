@@ -7,7 +7,8 @@ import random
 
 def show_main_window():
     welcome_frame.pack_forget()
-
+    main_frame.pack()
+    
 def find_largest():
     numbers = [float(entry_list[i].get()) for i in range(5) if entry_list[i].get()]
     
@@ -80,27 +81,38 @@ welcome_label.pack(pady=110)
 continue_button = tk.Button(welcome_frame, text="Continue", command=show_main_window, font=("Helvetica", 16), bg="green", fg="white")
 continue_button.pack()
 
+welcome_frame.gradient_image = gradient_image
+
+welcome_frame.pack()
+
+
+# Main Page
+main_frame = tk.Frame(root)
+
+photo = tk.PhotoImage(file="pic.png")
+background_label = tk.Label(main_frame, image=photo)
+background_label.pack(fill="both", expand=True)
+
+main_frame.pack_forget()
 
 labels = []
 entry_list = []
 
-
 for i in range(5):
-    label = tk.Label(root, text=f"Enter number {i+1}:", font=("Helvetica", 14))
-    label.grid(row=i, column=0, pady=10, padx=15)
+    label = tk.Label(main_frame, text=f"Enter number {i+1}:", font=("Helvetica", 14))
+    label.pack(pady=10, padx=15)
     labels.append(label)
 
-    entry = tk.Entry(root, font=("Helvetica", 14))
-    entry.grid(row=i, column=1, pady=10, padx=15)
+    entry = tk.Entry(main_frame, font=("Helvetica", 14))
+    entry.pack(pady=10, padx=15)
     entry_list.append(entry)
-    
-    
-result_label = tk.Label(root, text="", font=("Helvetica", 16), fg="#20B2AA", bg="#90EE90")
-result_label.grid(row=6, columnspan=2, pady=10)
+
+result_label = tk.Label(main_frame, text="", font=("Helvetica", 16))
+result_label.pack(pady=10)
 
 # Print the largest number
-find_button = tk.Button(text="Find Largest", command=check_largest, font=("Helvetica", 14))
-find_button.grid(row=5, columnspan=2, pady=20)
+find_button = tk.Button(main_frame, text="Find Largest", command=find_largest, font=("Helvetica", 14))
+find_button.pack(pady=20)
 
 
 root.mainloop()
