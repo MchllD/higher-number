@@ -5,6 +5,9 @@
 import tkinter as tk
 import random
 
+def show_main_window():
+    welcome_frame.pack_forget()
+
 def find_largest():
     numbers = [float(entry_list[i].get()) for i in range(5) if entry_list[i].get()]
     
@@ -62,6 +65,14 @@ root = tk.Tk()
 root.title("Find the Largest Number")
 root.geometry("430x360")
 
+# Welcome Page
+welcome_frame = tk.Frame(root, width=430, height=360) 
+welcome_frame.pack_propagate(0)  
+
+
+gradient_image = tk.PhotoImage(file="up.png")
+background_label = tk.Label(welcome_frame, image=gradient_image)
+background_label.place(relwidth=1, relheight=1)
 
 labels = []
 entry_list = []
