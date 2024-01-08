@@ -52,7 +52,11 @@ def check_largest():
     elif num4 >= num1 and num4 >= num2 and num4 >= num3 and num4 >= num5:
         result_label.config(text=f"Largest number is: {num4}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
         
-        
+# else:
+# Largest number is the fifth number
+    else:
+        result_label.config(text=f"Largest number is: {num5}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+ 
         
 root = tk.Tk()
 root.title("Find the Largest Number")
