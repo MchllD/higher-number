@@ -74,6 +74,9 @@ gradient_image = tk.PhotoImage(file="up.png")
 background_label = tk.Label(welcome_frame, image=gradient_image)
 background_label.place(relwidth=1, relheight=1)
 
+welcome_label = tk.Label(welcome_frame, text="Hi! Please input five numbers.", font=("Helvetica", 20), bg="white")
+welcome_label.pack(pady=110)
+
 labels = []
 entry_list = []
 
