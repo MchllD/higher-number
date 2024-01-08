@@ -77,6 +77,10 @@ background_label.place(relwidth=1, relheight=1)
 welcome_label = tk.Label(welcome_frame, text="Hi! Please input five numbers.", font=("Helvetica", 20), bg="white")
 welcome_label.pack(pady=110)
 
+continue_button = tk.Button(welcome_frame, text="Continue", command=show_main_window, font=("Helvetica", 16), bg="green", fg="white")
+continue_button.pack()
+
+
 labels = []
 entry_list = []
 
