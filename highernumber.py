@@ -29,38 +29,38 @@ def find_largest():
 # Input the fifth number
            
 def check_largest():
-    num1 = float(entry_list[0].get())
-    num2 = float(entry_list[1].get())
-    num3 = float(entry_list[2].get())
-    num4 = float(entry_list[3].get())
-    num5 = float(entry_list[4].get())
+    number1 = float(entry_list[0].get())
+    number2 = float(entry_list[1].get())
+    number3 = float(entry_list[2].get())
+    number4 = float(entry_list[3].get())
+    number5 = float(entry_list[4].get())
 
 
 # Check which number is the largest among the five
 # if first number is greater than or equal to second number and first number is greater than or equal to third number and first number is greater than or equal to fourth number and first number is greater than or equal to fifth number:
 # Largest number is the first number
-    if num1 >= num2 and num1 >= num3 and num1 >= num4 and num1 >= num5:
-        result_label.config(text=f"Largest number is: {num1}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+    if number1 >= number2 and number1 >= number3 and number1 >= number4 and number1 >= number5:
+        result_label.config(text=f"Largest number is: {number1}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
         
 # else if second number is greater than or equal to first number and second number is greater than or equal to third number and second number is greater than or equal to fourth number and second number is greater than or equal to fifth number:
 # Largest number is the second number
-    elif num2 >= num1 and num2 >= num3 and num2 >= num4 and num2 >= num5:
-        result_label.config(text=f"Largest number is: {num2}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+    elif number2 >= number1 and number2 >= number3 and number2 >= number2 and number2 >= number5:
+        result_label.config(text=f"Largest number is: {number2}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
         
 # else if third number is greater than or equal to first number and third number is greater than or equal to second number and third number is greater than or equal to fourth number and third number is greater than or equal to fifth number:
 # Largest number is the third number
-    elif num3 >= num1 and num3 >= num2 and num3 >= num4 and num3 >= num5:
-        result_label.config(text=f"Largest number is: {num3}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+    elif number3 >= number1 and number3 >= number2 and number3 >= number4 and number3 >= number5:
+        result_label.config(text=f"Largest number is: {number3}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
         
 # else if fourth number is greater than or equal to first number and fourth number is greater than or equal to second number and fourth number is greater than or equal to third number and fourth number is greater than or equal to fifth number:
 # Largest number is the fourth number
-    elif num4 >= num1 and num4 >= num2 and num4 >= num3 and num4 >= num5:
-        result_label.config(text=f"Largest number is: {num4}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+    elif number4 >= number1 and number4 >= number2 and number4 >= number3 and number4 >= number5:
+        result_label.config(text=f"Largest number is: {number4}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
         
 # else:
 # Largest number is the fifth number
     else:
-        result_label.config(text=f"Largest number is: {num5}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
+        result_label.config(text=f"Largest number is: {number5}", font=("Helvetica", 16, "bold"), bg="#AEC6CF", fg="#20B2AA")
 
 
 root = tk.Tk()
@@ -106,16 +106,16 @@ def check_largest():
         largest_index = numbers.index(max(numbers))
         largest = max(numbers)
         
-        result_label.config(text=f"Largest number is: {largest}", font=("Tahoma", 16, "bold"), bg="#FFD700", fg="#20B2AA")
+        result_label.config(text=f"Largest number is: {largest}", font=("Tahoma", 16, "bold"), bg="#39FF14", fg="black")
         
         for i, entry in enumerate(entry_list):
             if float(entry.get()) == largest:
-                entry.config(bg="#FFD700")  
+                entry.config(bg="#39FF14")  
             
             else:
                 entry.config(bg="white") 
     else:
-        result_label.config(text="Please enter at least one number.", font=("Helvetica", 14), fg="#FF0000")
+        result_label.config(text="Please enter at least one number.", font=("Helvetica", 14), fg="#39FF14")
 
 
 for i in range(5):
