@@ -79,7 +79,7 @@ background_label.place(relwidth=1, relheight=1)
 welcome_label = tk.Label(welcome_frame, text="Hi! Please input five numbers.", font=("Tahoma", 19, "bold"), bg="white")
 welcome_label.pack(pady=110)
 
-continue_button = tk.Button(welcome_frame, text="Continue", command=show_main_window, font=("Helvetica", 18), bg="green", fg="white")
+continue_button = tk.Button(welcome_frame, text="Continue", command=show_main_window, font=("Courier New", 18, "bold"), bg="green", fg="white")
 continue_button.pack()
 
 
@@ -106,7 +106,7 @@ def check_largest():
         largest_index = numbers.index(max(numbers))
         largest = max(numbers)
         
-        result_label.config(text=f"Largest number is: {largest}", font=("Helvetica", 16, "bold"), bg="#FFD700", fg="#20B2AA")
+        result_label.config(text=f"Largest number is: {largest}", font=("Tahoma", 16, "bold"), bg="#FFD700", fg="#20B2AA")
         
         for i, entry in enumerate(entry_list):
             if float(entry.get()) == largest:
@@ -127,7 +127,7 @@ for i in range(5):
     entry.grid(row=i, column=1, pady=10, padx=15)
     entry_list.append(entry)
 
-find_button = tk.Button(main_frame, text="Find Largest", command=check_largest, font=("Helvetica", 14))
+find_button = tk.Button(main_frame, text="Find Largest", command=check_largest, font=("Helvetica", 14), bg="green", fg="white")
 find_button.grid(row=5, columnspan=2, pady=20)
 
 result_label = tk.Label(main_frame, text="", font=("Helvetica", 20))
