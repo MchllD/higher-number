@@ -114,6 +114,8 @@ result_label.pack(pady=10)
 find_button = tk.Button(main_frame, text="Find Largest", command=find_largest, font=("Helvetica", 14))
 find_button.pack(pady=20)
 
+result_label = tk.Label(main_frame, text="", font=("Helvetica", 20))
+result_label.pack(pady=10)
 
 root.mainloop()
 
