@@ -98,6 +98,25 @@ main_frame.pack_forget()
 labels = []
 entry_list = []
 
+def check_largest():
+    numbers = [float(entry_list[i].get()) for i in range(5) if entry_list[i].get()]
+    if numbers:
+        largest_index = numbers.index(max(numbers))
+        largest = max(numbers)
+        
+        result_label.config(text=f"Largest number is: {largest}", font=("Helvetica", 16, "bold"), bg="#FFD700", fg="#20B2AA")
+        
+        for i, entry in enumerate(entry_list):
+            if float(entry.get()) == largest:
+                entry.config(bg="#FFD700")  
+            
+            else:
+                entry.config(bg="white") 
+    else:
+        result_label.config(text="Please enter at least one number.", font=("Helvetica", 14), fg="#FF0000")
+
+
+
 for i in range(5):
     label = tk.Label(main_frame, text=f"Enter number {i+1}:", font=("Helvetica", 14))
     label.pack(pady=10, padx=15)
