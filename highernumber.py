@@ -115,7 +115,7 @@ def check_largest():
             else:
                 entry.config(bg="white") 
     else:
-        result_label.config(text="Please enter at least one number.", font=("Helvetica", 14), fg="#39FF14")
+        result_label.config(text="Please enter at least one number per column.", font=("Helvetica", 12), fg="red")
 
 
 for i in range(5):
